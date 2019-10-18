@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+<nav class="navbar navbar-expand-md navbar-dark bg-primary navbar-laravel">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -30,12 +30,19 @@
                     </div>
                 </li>
                 @else
+                @guest
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">Login</a>
                 </li>
+                @if (Route::has('register'))
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('register') }}">Register</a>
+                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                 </li>
+                @endif
+                @endguest
+                {{-- <li class="nav-item">
+                    <a class="nav-link" href="{{ route('register') }}">Register</a>
+                </li> --}}
                 @endif
                 @if(Auth::guard('admin')->check())
                 <li class="nav-item dropdown">
