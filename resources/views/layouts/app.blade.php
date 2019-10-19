@@ -20,6 +20,18 @@
             animation: slide 0.5s forwards;
         }
 
+        .bg-lavender {
+            background-color: lavender;
+            height: 91vh;
+            max-height: 91vh;
+        }
+        .sidebar-bg {
+            background-color: #414141;
+            height: 91vh;
+            max-height: 91vh;
+            padding: 0 !important;
+        }
+
         @keyframes slide {
             100% {
                 top: 25px;
@@ -43,9 +55,9 @@
 <body>
 
     @include('inc.navbar')
-    <main class="container-fluid mt-5">
+    <main class="container-fluid bg-lavender">
         <div class="row">
-        @yield('content')
+            @yield('content')
         </div>
     </main>
 

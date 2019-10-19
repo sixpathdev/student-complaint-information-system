@@ -8,10 +8,30 @@
     </div>
     @endif
 </div>
-<div class="col-lg-2 text-white text-center font-weight-bold bg-primary py-3">
-    <div>View Complaints</div>
-</div>
+@include('inc.sidebar')
 <div class="col-lg-10">
-    <h2 class="text-center text-primary">Dashboard</h2>
+    <div class="row mt-4">
+        <div class="col-lg-4">
+            <div class="card text-white bg-warning py-4">
+                <div class="card-body">
+                    <p class="card-text mt-4">Total Complaints</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card text-white bg-info py-4">
+                <div class="card-body">
+                    <p class="card-text mt-4">Total Students</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card text-white bg-success py-4">
+                <div class="card-body">
+                    <p class="card-text mt-4">Reviewed complaints</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
