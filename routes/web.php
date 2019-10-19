@@ -46,4 +46,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-// Route::get('/complaints/create', 'ComplaintController@index')->name('complaint');
+Route::get('/complaint/create', 'ComplaintController@index')->name('complaint');
