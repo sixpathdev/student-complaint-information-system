@@ -25,11 +25,16 @@
             height: 91vh;
             max-height: 91vh;
         }
+
         .sidebar-bg {
             background-color: #414141;
             height: 91vh;
             max-height: 91vh;
             padding: 0 !important;
+        }
+
+        .form-label {
+            color: gray;
         }
 
         @keyframes slide {

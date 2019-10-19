@@ -47,3 +47,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/complaint/create', 'ComplaintController@index')->name('complaint');
+Route::post('/complaint', 'ComplaintController@store');

@@ -36,9 +36,13 @@ return [
     */
 
     'guards' => [
+        // 'web' => [
+        //     'driver' => 'session',
+        //     'provider' => 'users',
+        // ],
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'students',
         ],
 
         'api' => [
@@ -80,6 +84,11 @@ return [
             'model' => App\Admin::class,
         ],
 
+        'students' => [
+            'driver' => 'eloquent',
+            'model' => App\Student::class,
+        ],
+
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
@@ -107,6 +116,13 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
         ], 
+        
+        'students' => [
+            'provider' => 'students',
+            'table' => 'password_resets',
+            'expire' => 60
+        ],
+
         'admins' => [
             'provider' => 'admins',
             'table' => 'password_resets',
