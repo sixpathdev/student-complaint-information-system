@@ -15,9 +15,14 @@ class CreateComplaintsTable extends Migration
     {
         Schema::create('complaints', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedInteger('student_id');
             $table->string('title');
             $table->text('body');
             $table->timestamps();
+
+            // $table->engine = 'InnoDB';
+
+            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
         });
     }
 

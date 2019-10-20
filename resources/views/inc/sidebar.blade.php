@@ -25,7 +25,7 @@
                 Create complaint
             </div>
         </a>
-        <a href="#" class="text-white text-decoration-none">
+        <a href="/complaints" class="text-white text-decoration-none">
             <div class="py-2 border-bottom">
                 View complaints
             </div>
