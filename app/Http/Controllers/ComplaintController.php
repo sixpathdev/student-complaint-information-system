@@ -38,10 +38,15 @@ class ComplaintController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required|string|unique:complaints|max:40|min:5',
-            'body' => 'required|string|min:5|max:255'
-        ]);
+        $request->validate(
+            [
+                'title' => 'required|string|unique:complaints|max:40|min:5',
+                'body' => 'required|string|min:5|max:255'
+            ],
+            [
+                'title.exists' => 'These credentials do not match our records.',
+            ]
+        );
 
         $complaint = new Complaint();
         $student = Auth::user();
