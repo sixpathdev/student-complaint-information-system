@@ -15,16 +15,16 @@
             </ul>
         </div>
         @endif
-        <form method="POST" action="/complaints">
+        <form method="POST" action="/complaints/{{$complaint->id}}">
             @csrf
+            @method('patch')
             <div class="form-group">
-
                 <input type="text" name="title" placeholder="Complaint Title" id="title" class="form-control"
-                    value="{{ old('title') }}">
+                    value="{{ $complaint->title }}">
             </div>
             <div class="form-group mt-4">
                 <textarea type="text" rows="8" name="body" placeholder="Complaint body" id="body"
-                    class="form-control">{{ old('body') }}</textarea>
+                    class="form-control">{{ $complaint->body }}</textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

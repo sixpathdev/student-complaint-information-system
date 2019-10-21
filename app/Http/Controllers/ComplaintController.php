@@ -21,7 +21,6 @@ class ComplaintController extends Controller
         $complaints = Complaint::where('student_id', Auth::id())->get();
 
         return view('allcomplaints', compact('complaints'));
-
     }
 
     public function create()
@@ -29,7 +28,7 @@ class ComplaintController extends Controller
         return view('createcomplaint');
     }
 
-    public function show(Complaint $id)
+    public function show($id)
     {
 
         $complaint = Complaint::findOrFail($id);
@@ -54,6 +53,29 @@ class ComplaintController extends Controller
 
         $request->session()->flash('status', 'Complaint created!');
 
-        return redirect('home');
+        return redirect('/complaints');
+    }
+
+    public function edit(Complaint $complaint)
+    {
+        return view('editcomplaint', compact('complaint'));
+    }
+
+    public function update(Complaint $complaint)
+    {
+        $complaint->title = request('title');
+        $complaint->body = request('body');
+        $complaint->save();
+
+        // $request->session()->flash('status', 'Complaint updated!');
+
+        return redirect('/complaints')->with('status', 'Complaint updated');
+    }
+
+    public function delete(Complaint $complaint)
+    {
+        $complaint->delete();
+
+        return redirect('/complaints')->with('status', 'Complaint successfully deleted.');
     }
 }

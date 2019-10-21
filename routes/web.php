@@ -48,9 +48,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/complaints', 'ComplaintController@index');
-Route::get('/complaint/create', 'ComplaintController@create')->name('complaint');
+Route::get('/complaints/create', 'ComplaintController@create')->name('complaint');
 Route::get('/complaints/{complaint}', 'ComplaintController@show');
-Route::post('/complaint', 'ComplaintController@store');
+Route::post('/complaints', 'ComplaintController@store');
+Route::get('/complaints/{complaint}/edit', 'ComplaintController@edit');
+Route::patch('/complaints/{complaint}', 'ComplaintController@update');
+Route::delete('/complaints/{complaint}', 'ComplaintController@delete');
 //edit
 //update
 //destroy

@@ -1,13 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
+@include('inc.sidebar')
 
-<h1 class="heading">My complaints</h1>
+<div class="col-lg-10">
+    <div class="text-center my-4">
+        <h1>My complaints</h1>
+    </div>
 
-<ul>
-    @foreach ($complaints as $complaint)
-        <li>{{$complaint->title}}</li>
-    @endforeach
-</ul>
+    <div class="col-lg-12">
+        <ul class="list-group">
+            @foreach ($complaints as $complaint)
+            <li class="list-group-item"><a href="/complaints/{{$complaint->id}}">{{$complaint->title}}</a></li>
+            @endforeach
+        </ul>
+    </div>
+</div>
 
 @endsection
