@@ -36,4 +36,11 @@ class AdminController extends Controller
 
         return back();
     }
+
+    public function showreviewed(Complaint $complaint)
+    {
+        $reviewedcomplaints = $complaint->where('reviewed', true)->get();
+
+        return view('admin.reviewedcomplaints', compact('reviewedcomplaints'));
+    }
 }

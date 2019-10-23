@@ -27,8 +27,8 @@
             @endforeach
         </ul>
         @else
-        <div class="bg-warning text-white">
-            No Students complaints yet
+        <div class="bg-warning text-white text-center mt-lg-5">
+            <h4>No Students complaints yet</h4>
         </div>
         @endif
 

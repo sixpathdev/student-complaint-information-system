@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Complaint;
-use App\Student;
+// use App\Student;
 use Illuminate\Support\Facades\Auth;
 
 class ComplaintController extends Controller
@@ -72,8 +72,6 @@ class ComplaintController extends Controller
         $complaint->body = request('body');
         $complaint->save();
 
-        // $request->session()->flash('status', 'Complaint updated!');
-
         return redirect('/complaints')->with('status', 'Complaint updated');
     }
 
@@ -82,5 +80,13 @@ class ComplaintController extends Controller
         $complaint->delete();
 
         return redirect('/complaints')->with('status', 'Complaint successfully deleted.');
+    }
+
+    public function reviewedcomplaints(Complaint $complaint)
+    {
+        // $reviewedcomplaints = $complaint->where('reviewed', true)->get();
+        $reviewedcomplaints = $complaint->where(['reviewed' => true, 'student_id' => Auth::id()])->get();
+
+        return view('reviewedcomplaints', compact('reviewedcomplaints'));
     }
 }
