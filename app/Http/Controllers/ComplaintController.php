@@ -84,8 +84,12 @@ class ComplaintController extends Controller
 
     public function reviewedcomplaints(Complaint $complaint)
     {
-        // $reviewedcomplaints = $complaint->where('reviewed', true)->get();
-        $reviewedcomplaints = $complaint->where(['reviewed' => true, 'student_id' => Auth::id()])->get();
+        $reviewedcomplaints = $complaint->where(
+                [
+                    'reviewed' => true,
+                    'student_id' => Auth::id()
+                ]
+            )->get();
 
         return view('reviewedcomplaints', compact('reviewedcomplaints'));
     }
