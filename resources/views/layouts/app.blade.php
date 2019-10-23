@@ -37,6 +37,12 @@
             color: gray;
         }
 
+        .bg-footer {
+            padding: 0.6em 0;
+            margin-left: 18%;
+            text-align: center;
+        }
+
         @keyframes slide {
             100% {
                 top: 25px;
@@ -63,6 +69,7 @@
     <main class="container-fluid bg-lavender">
         <div class="row">
             @yield('content')
+            @include('inc.footer')
         </div>
     </main>
 
