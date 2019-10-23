@@ -28,6 +28,7 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function () {
     Route::get('/viewcomplaint/{complaint}', 'AdminController@show');
     Route::patch('/review/{complaint}', 'AdminController@update');
     Route::get('/complaints/reviewed', 'AdminController@showreviewed');
+    Route::get('/students', 'AdminController@getstudents');
     // });
 
 

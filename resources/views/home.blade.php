@@ -12,16 +12,18 @@
 <div class="col-lg-10">
     <div class="row mt-4">
         <div class="col-lg-4">
-            <div class="card text-white bg-warning py-4">
+            <div class="card text-white bg-warning pt-3 pb-2">
                 <div class="card-body">
-                    <p class="card-text mt-4">Total Complaints</p>
+                    <p class="card-text mt-4 text-dark h4">Total Complaints</p>
+                    <p class="h4 text-center text-dark">{{$allstudentscount}}</p>
                 </div>
             </div>
         </div>
         <div class="col-lg-4">
-            <div class="card text-white bg-info py-4">
+            <div class="card text-white bg-info pt-3 pb-2">
                 <div class="card-body">
-                    <p class="card-text mt-4">Total Reviewed</p>
+                    <p class="card-text mt-4 text-dark h4">Total Reviewed</p>
+                    <p class="h4 text-center text-dark">{{$reviewedcomplaints}}</p>
                 </div>
             </div>
         </div>

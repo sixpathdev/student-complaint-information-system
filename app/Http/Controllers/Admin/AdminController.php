@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Complaint;
+use App\Student;
 
 class AdminController extends Controller
 {
@@ -42,5 +43,12 @@ class AdminController extends Controller
         $reviewedcomplaints = $complaint->where('reviewed', true)->get();
 
         return view('admin.reviewedcomplaints', compact('reviewedcomplaints'));
+    }
+
+    public function getstudents(Student $student)
+    {
+        $allstudents = $student::all();
+
+        return view('admin.allstudents', compact('allstudents'));
     }
 }

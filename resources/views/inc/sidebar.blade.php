@@ -1,7 +1,12 @@
-<div class="col-lg-2 sidebar-bg text-center">
+<div class="col-lg-2 sidebar-bg bg-dark text-center border-top">
     @if(Auth::guard('admin')->check())
-    <div class="mt-5 border-top">
-        <a href="#" class="text-white text-decoration-none">
+    <div class="mt-2">
+        <a href="/admin/home" class="text-white text-decoration-none">
+            <div class="py-2 border-bottom">
+                Dashboard
+            </div>
+        </a>
+        <a href="/admin/students" class="text-white text-decoration-none">
             <div class="py-2 border-bottom">
                 Students
             </div>
@@ -18,7 +23,12 @@
         </a>
     </div>
     @else
-    <div class="mt-5 border-top">
+    <div class="mt-2">
+        <a href="/home" class="text-white text-decoration-none">
+            <div class="py-2 border-bottom">
+                Dashboard
+            </div>
+        </a>
         <a href="/complaints/create" class="text-white text-decoration-none">
             <div class="py-2 border-bottom">
                 Create complaint
