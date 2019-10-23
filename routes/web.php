@@ -15,12 +15,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('complain')
 
 Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function () {
     //All the admin routes will be defined here...
     Route::get('/home', 'HomeController@index')->name('home');
     // Route::get('/adminreg', 'RegisterController@showRegForm');
+
+    //Dashboard
+    // Route::get('/studentcomplaints', 'AdminController@index');
+    // Route::group(['middleware' => ['auth:admin']], function () {
+    Route::get('/studentcomplaints', 'AdminController@index');
+    Route::get('/viewcomplaint/{complaint}', 'AdminController@show');
+    Route::patch('/review/{complaint}', 'AdminController@update');
+    // });
+
 
     Route::namespace('Auth')->group(function () {
 
@@ -57,4 +65,3 @@ Route::delete('/complaints/{complaint}', 'ComplaintController@delete');
 //edit
 //update
 //destroy
-

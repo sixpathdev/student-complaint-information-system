@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Complaint;
-use App\User;
 use App\Student;
 use Illuminate\Support\Facades\Auth;
 
@@ -33,6 +32,7 @@ class ComplaintController extends Controller
 
         $complaint = Complaint::findOrFail($id);
 
+        abort_if($complaint->student_id !== Auth::id(), 403);
         return view('showcomplaint', compact('complaint'));
     }
 

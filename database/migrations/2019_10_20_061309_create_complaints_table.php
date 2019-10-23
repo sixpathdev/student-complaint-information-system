@@ -18,6 +18,7 @@ class CreateComplaintsTable extends Migration
             $table->unsignedInteger('student_id');
             $table->string('title');
             $table->text('body');
+            $table->boolean('reviewed')->default(false);
             $table->timestamps();
 
             // $table->engine = 'InnoDB';

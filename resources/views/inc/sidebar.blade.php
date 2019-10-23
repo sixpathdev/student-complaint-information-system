@@ -6,7 +6,7 @@
                 Students
             </div>
         </a>
-        <a href="#" class="text-white text-decoration-none">
+        <a href="/admin/studentcomplaints" class="text-white text-decoration-none">
             <div class="py-2 border-bottom">
                 Students complaints
             </div>

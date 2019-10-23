@@ -11,7 +11,8 @@
     <div class="col-lg-12">
         <ul class="list-group">
             @foreach ($complaints as $complaint)
-            <li class="list-group-item"><a href="/complaints/{{$complaint->id}}">{{$complaint->title}}</a></li>
+            <li class="list-group-item {{$complaint->reviewed ? 'bg-success text-white' : ''}}"><a
+                    href="/complaints/{{$complaint->id}}" class="{{$complaint->reviewed ? 'text-decoration-none text-white h5' : ''}}">{{$complaint->title}}</a></li>
             @endforeach
         </ul>
     </div>
