@@ -15,7 +15,7 @@
             <div class="card text-white bg-warning pt-3 pb-2">
                 <div class="card-body">
                     <p class="card-text mt-4 text-dark h4">Total Complaints</p>
-                    <p class="h4 text-center text-dark">{{$allstudentscount}}</p>
+                    <p class="h4 text-center text-dark">{{$mycomplaints}}</p>
                 </div>
             </div>
         </div>

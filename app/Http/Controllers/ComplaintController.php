@@ -17,7 +17,12 @@ class ComplaintController extends Controller
 
     public function index()
     {
-        $complaints = Complaint::where('student_id', Auth::id())->get();
+        $complaints = Complaint::where(
+            [
+                'reviewed' => !true,
+                'student_id' => Auth::id()
+            ]
+        )->get();
 
         return view('allcomplaints', compact('complaints'));
     }
@@ -85,11 +90,11 @@ class ComplaintController extends Controller
     public function reviewedcomplaints(Complaint $complaint)
     {
         $reviewedcomplaints = $complaint->where(
-                [
-                    'reviewed' => true,
-                    'student_id' => Auth::id()
-                ]
-            )->get();
+            [
+                'reviewed' => true,
+                'student_id' => Auth::id()
+            ]
+        )->get();
 
         return view('reviewedcomplaints', compact('reviewedcomplaints'));
     }

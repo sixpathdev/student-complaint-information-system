@@ -40,7 +40,7 @@ class LoginController extends Controller
     public function showLoginForm()
     {
         return view('auth.login', [
-            'title' => 'Login',
+            'title' => 'Student Login',
             'loginRoute' => 'login',
             'forgotPasswordRoute' => 'password.request',
         ]);

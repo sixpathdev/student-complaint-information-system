@@ -13,8 +13,9 @@
         <ul class="list-group">
             @foreach ($reviewedcomplaints as $reviewedcomplaint)
             <li class="list-group-item {{$reviewedcomplaint->reviewed ? 'bg-success text-white' : ''}}">
-                <a href="/admin/viewcomplaint/{{$reviewedcomplaint->id}}"
+                <a
                     class="{{$reviewedcomplaint->reviewed ? 'text-decoration-none text-white h5' : ''}}">{{$reviewedcomplaint->title}}</a>
+                <span class="badge badge-pill badge-light text-success float-right py-auto">Reviewed</span>
             </li>
             @endforeach
         </ul>

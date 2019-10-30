@@ -16,7 +16,7 @@ class AdminController extends Controller
 
     public function index()
     {
-        $allcomplaints = Complaint::all();
+        $allcomplaints = Complaint::where('reviewed', !true)->get();
 
         return view('admin.getallcomplaints', compact('allcomplaints'));
     }

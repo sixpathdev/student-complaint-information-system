@@ -26,12 +26,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $allstudentscount = Student::count();
+        // $allstudentscount = Student::count();
 
-        $allcomplaintscount = Complaint::where(['reviewed' => true, 'student_id' => Auth::id()])->get();
+        $allcomplaintscount1 = Complaint::where('student_id', Auth::id())->get();
 
-        $reviewedcomplaints = count($allcomplaintscount);
+        $reviewedcomplaintscount = Complaint::where(['reviewed' => true, 'student_id' => Auth::id()])->get();
 
-        return view('home', compact(['allstudentscount', 'reviewedcomplaints']));
+        $mycomplaints = count($allcomplaintscount1);
+        $reviewedcomplaints = count($reviewedcomplaintscount);
+
+        return view('home', compact(['mycomplaints', 'reviewedcomplaints']));
     }
 }
