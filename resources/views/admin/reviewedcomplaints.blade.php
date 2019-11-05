@@ -15,7 +15,12 @@
             <li class="list-group-item {{$reviewedcomplaint->reviewed ? 'bg-success text-white' : ''}}">
                 <a
                     class="{{$reviewedcomplaint->reviewed ? 'text-decoration-none text-white h5' : ''}}">{{$reviewedcomplaint->title}}</a>
-                <span class="badge badge-pill badge-light text-success float-right py-auto">Reviewed</span>
+                    <form method="POST" action="/admin/complaints/{{$reviewedcomplaint->id}}">
+                        @csrf
+                        @method('delete')
+                        <button class="btn btn-danger float-right">Delete</button>
+                    </form>
+                <span class="badge badge-pill badge-light text-success ml-lg-5 py-auto">Reviewed</span>
             </li>
             @endforeach
         </ul>

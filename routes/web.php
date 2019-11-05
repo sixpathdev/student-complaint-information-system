@@ -26,6 +26,7 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function () {
     Route::get('/studentcomplaints', 'AdminController@index');
     Route::get('/viewcomplaint/{complaint}', 'AdminController@show');
     Route::patch('/review/{complaint}', 'AdminController@update');
+    Route::delete('/complaints/{complaint}', 'AdminController@delete');
     Route::get('/complaints/reviewed', 'AdminController@showreviewed');
     Route::get('/students', 'AdminController@getstudents');
     // });

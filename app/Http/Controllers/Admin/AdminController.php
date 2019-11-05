@@ -51,4 +51,11 @@ class AdminController extends Controller
 
         return view('admin.allstudents', compact('allstudents'));
     }
+
+    public function delete(Complaint $complaint)
+    {
+        $complaint->delete();
+
+        return redirect('admin/complaints/reviewed')->with('status', 'Complaint successfully deleted.');
+    }
 }
