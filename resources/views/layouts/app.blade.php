@@ -19,7 +19,7 @@
         .marginbottom-content {
             position: relative;
             bottom: 14em;
-            margin-bottom: 10em;
+            margin-bottom: 5em;
         }
 
         .smaller-h4,
