@@ -15,7 +15,7 @@ Route::get('/', 'Auth\LoginController@showLoginForm');
 //     return view('login');
 // });
 
-Route::prefix('/admin')->name('admin')->namespace('Admin')->group(function () {
+Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function () {
     //All the admin routes will be defined here...
     Route::get('/home', 'HomeController@index')->name('home');
     // Route::get('/adminreg', 'RegisterController@showRegForm');

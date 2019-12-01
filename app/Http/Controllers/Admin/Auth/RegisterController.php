@@ -18,7 +18,7 @@ class RegisterController extends Controller
     {
         return view('adminreg', [
             'title' => 'Admin Register',
-            'registerRoute' => 'admin.register',
+            'registerRoute' => 'admin/register',
         ]);
     }
 
