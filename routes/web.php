@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('auth.login')->name('login');
+    return view('login')->name('login');
 });
 
 Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function () {
