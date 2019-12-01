@@ -5,7 +5,7 @@
 
 <div class="col-lg-10">
     <div class="text-center my-4">
-        <h1>Reviewed Complaints</h1>
+        <h1 class="custom-text-size3">Reviewed Complaints</h1>
     </div>
 
     <div class="col-lg-12">

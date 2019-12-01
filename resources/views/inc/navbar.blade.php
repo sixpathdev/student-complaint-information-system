@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-laravel">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
+        <a class="navbar-brand custom-text-size" href="{{ url('/') }}">
             <b>{{ config('app.name', 'Miracle SCMS') }}</b>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -15,7 +15,7 @@
                 @if(Auth::guard('web')->check())
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> Hello  
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> Hello
                         {{ Auth::guard('web')->user()->name }} <span class="caret"></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

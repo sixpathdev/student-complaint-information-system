@@ -3,14 +3,14 @@
 @section('content')
 @include('inc.sidebar')
 
-<div class="col-lg-10">
+<div class="col-md-10 toggle-block">
     <div class="text-center my-4">
-        <h1>All Students</h1>
+        <h1 class="custom-text-size3">All Students</h1>
     </div>
 
-    <div class="col-lg-12">
+    <div class="col-md-10 toggle-block">
         @if ($allstudents->count())
-        <table class="table table-striped">
+        <table class="table table-striped table-responsive">
             <thead>
                 <tr>
                     <th scope="col">ID</th>

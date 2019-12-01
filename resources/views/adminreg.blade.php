@@ -2,10 +2,10 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center mt-4">
+    <div class="row justify-content-center mt-2 mt-md-1 mt-lg-4">
         <div class="col-md-5">
             <div class="card">
-                <div class="col-12 text-center h5 mt-3"> REGISTER AS ADMIN</div>
+                <div class="col-12 text-center h5 mt-3 smaller-h4"> REGISTER AS ADMIN</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route($registerRoute) }}">
                         @csrf

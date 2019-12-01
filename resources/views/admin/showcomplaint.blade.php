@@ -4,10 +4,10 @@
 
 @include('inc.sidebar')
 
-<div class="col-lg-10 text-center mt-5">
+<div class="col-md-10 text-center mt-4">
     <div class="jumbotron">
-        <h1>{{$complaint->title}}</h1>
-        <p class="mt-5">{{$complaint->body}}</p>
+        <h2>{{$complaint->title}}</h2>
+        <p class="mt-4">{{$complaint->body}}</p>
     </div>
 </div>
 

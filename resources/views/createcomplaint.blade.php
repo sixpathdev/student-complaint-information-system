@@ -4,7 +4,7 @@
 
 @include('inc.sidebar')
 
-<div class="col-lg-10">
+<div class="col-lg-10 mt-4">
 <div class="col-lg-7 mt-lg-5 ml-lg-5">
 @if ($errors->any())
 <div class="alert alert-danger">

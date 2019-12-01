@@ -3,12 +3,12 @@
 @section('content')
 @include('inc.sidebar')
 
-<div class="col-lg-10">
+<div class="col-md-10 toggle-block">
     <div class="text-center my-4">
-        <h1>All Students complaints</h1>
+        <h4>All Students complaints</h4>
     </div>
 
-    <div class="col-lg-12">
+    <div class="col-lg-10">
         @if ($allcomplaints->count())
         <ul class="list-group">
             @foreach ($allcomplaints as $acomplaint)

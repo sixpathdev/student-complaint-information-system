@@ -11,6 +11,23 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
         /* these styles will animate bootstrap alerts. */
+        .margintop-content {
+            position: relative;
+            top: 1em;
+        }
+
+        .marginbottom-content {
+            position: relative;
+            bottom: 14em;
+            margin-bottom: 10em;
+        }
+
+        .smaller-h4,
+        .text-gray {
+            font-size: 18px;
+            color: gray;
+        }
+
         .alert {
             z-index: 99;
             top: 100px;
@@ -49,6 +66,14 @@
             }
         }
 
+        .togglecontent {
+            display: none;
+        }
+
+        .toggle-button {
+            display: none;
+        }
+
         @media screen and (max-width: 668px) {
             .alert {
                 /* center the alert on small screens */
@@ -57,11 +82,40 @@
                 left: 14px;
                 right: 10px;
             }
+
+            .custom-text-size {
+                font-size: 9px;
+            }
+
+            .custom-text-size2 {
+                font-size: 12px;
+            }
+
+            .custom-text-size3 {
+                font-size: 26px;
+                color: gray;
+            }
+
+            .sidebar-toggle {
+                display: none;
+            }
+
+            .toggle-menu {
+                display: block;
+                width: 45%;
+                max-width: 60%;
+            }
+
+            .toggle-button {
+                display: block;
+            }
+
         }
     </style>
 
     <title>{{config('app.name')}}</title>
 </head>
+
 <body>
 
     @include('inc.navbar')
@@ -108,8 +162,13 @@
         $(document).ready(function(){
 	    setTimeout(function() {
 	        $(".alert").alert('close');
-	    }, 3000);
-    	});
+        }, 3000);
+        $(".menu-btn").click(function (e) {
+        e.preventDefault;
+        $(".sidebar-toggle").toggleClass("toggle-menu");
+        $(".toggle-block").toggleClass("togglecontent");
+        });
+        });
     </script>
 
 </body>

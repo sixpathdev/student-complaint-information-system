@@ -3,23 +3,24 @@
 @section('content')
 @include('inc.sidebar')
 
-<div class="col-lg-10">
+<div class="col-md-10 toggle-block">
     <div class="text-center my-4">
-        <h1>Reviewed Complaints</h1>
+        <h3>Reviewed Complaints</h3>
     </div>
 
-    <div class="col-lg-12">
+    <div class="col-md-10">
         @if ($reviewedcomplaints->count())
         <ul class="list-group">
             @foreach ($reviewedcomplaints as $reviewedcomplaint)
-            <li class="list-group-item {{$reviewedcomplaint->reviewed ? 'bg-success text-white' : ''}}">
-                <a
-                    class="{{$reviewedcomplaint->reviewed ? 'text-decoration-none text-white h5' : ''}}">{{$reviewedcomplaint->title}}</a>
-                    <form method="POST" action="/admin/complaints/{{$reviewedcomplaint->id}}">
-                        @csrf
-                        @method('delete')
-                        <button class="btn btn-danger float-right">Delete</button>
-                    </form>
+            <li class="list-group-item mb-1 {{$reviewedcomplaint->reviewed ? 'bg-success text-white' : ''}}">
+                <a class="{{$reviewedcomplaint->reviewed ? 'text-decoration-none text-white h5' : ''}}">
+                    <h5>{{$reviewedcomplaint->title}}</h5>
+                </a>
+                <form method="POST" action="/admin/complaints/{{$reviewedcomplaint->id}}">
+                    @csrf
+                    @method('delete')
+                    <button class="btn btn-danger float-right">Delete</button>
+                </form>
                 <span class="badge badge-pill badge-light text-success ml-lg-5 py-auto">Reviewed</span>
             </li>
             @endforeach

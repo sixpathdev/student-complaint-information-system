@@ -1,4 +1,7 @@
-<div class="col-lg-2 sidebar-bg bg-dark text-center border-top">
+<div class="col-12 toggle-button">
+    <button class="btn btn-default bg-primary text-white mt-1 menu-btn">Menu</button>
+</div>
+<div class="col-md-2 sidebar-bg bg-dark text-center border-top sidebar-toggle">
     @if(Auth::guard('admin')->check())
     <div class="mt-2">
         <a href="/admin/home" class="text-white text-decoration-none">
