@@ -62,7 +62,6 @@
 
     <title>{{config('app.name')}}</title>
 </head>
-
 <body>
 
     @include('inc.navbar')
