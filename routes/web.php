@@ -55,11 +55,11 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function () {
 
 // Auth::routes();
 
-// Route::group(['namespace' => 'Auth'], function () {
-//     Route::get('/', 'Auth\LoginController@showLoginForm');
-//     Route::post('login', 'Auth\LoginController@login');
-//     Route::post('logout', 'Auth\LoginController@logout');
-// });
+Route::group(['namespace' => 'Auth'], function () {
+    Route::get('/', 'Auth\LoginController@showLoginForm');
+    Route::post('login', 'Auth\LoginController@login');
+    Route::post('logout', 'Auth\LoginController@logout');
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
 
