@@ -10,11 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'LoginController@showLoginForm');
 
-// Route::get('/', function () {
-//     return view('login');
-// });
+Route::get('/', function () {
+    return view('auth.login');
+});
 
 Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function () {
     //All the admin routes will be defined here...
