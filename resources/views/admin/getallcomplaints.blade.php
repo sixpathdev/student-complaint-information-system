@@ -1,11 +1,11 @@
-@extends('layouts.app')
+3@extends('layouts.app')
 
 @section('content')
 @include('inc.sidebar')
 
 <div class="col-md-10 toggle-block">
     <div class="text-center my-4">
-        <h4>All Students complaints</h4>
+        <h3>All Students complaints</h3>
     </div>
 
     <div class="col-lg-10">

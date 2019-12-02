@@ -10,7 +10,7 @@
         <p class="mt-3 mt-lg-5">{{$complaint->body}}</p>
         <div class="col-lg-12">
             <a href="/complaints/{{$complaint->id}}/edit" class="text-white">
-                <button class="btn btn-dark float-left px-2 px-lg-4">Edit</button>
+                <button class="btn btn-dark text-white float-left px-2 px-lg-4">Edit</button>
             </a>
             <form method="POST" action="/complaints/{{$complaint->id}}">
                 @csrf

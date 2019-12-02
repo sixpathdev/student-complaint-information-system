@@ -26,7 +26,7 @@
                 <textarea type="text" rows="8" name="body" placeholder="Complaint body" id="body"
                     class="form-control">{{ old('body') }}</textarea>
             </div>
-            <button type="submit" class="btn btn-dark">Submit</button>
+            <button type="submit" class="btn btn-dark text-white">Submit</button>
         </form>
     </div>
 </div>

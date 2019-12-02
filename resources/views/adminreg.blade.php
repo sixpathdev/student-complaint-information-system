@@ -73,7 +73,7 @@
                             @enderror
                         </div>
 
-                        <button type="submit" class="col-12 btn btn-dark">
+                        <button type="submit" class="col-12 btn btn-dark text-white">
                             {{ __('Register') }}
                         </button>
                     </form>
