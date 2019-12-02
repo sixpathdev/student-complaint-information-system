@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-laravel">
     <div class="container">
         <a class="navbar-brand custom-text-size" href="{{ url('/') }}">
-            <b>{{ config('app.named', 'Miracle SCIS') }}</b>
+            {{-- <b>{{ config('app.named', 'Miracle SCIS') }}</b> --}}
+        <h3>{{'Miracle SCIS'}}</h3>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
