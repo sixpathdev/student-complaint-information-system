@@ -113,7 +113,7 @@
         }
     </style>
 
-    <title>{{config('app.name')}}</title>
+    <title>{{config('app.nadme', 'Miracle - SCIS')}}</title>
 </head>
 
 <body>
