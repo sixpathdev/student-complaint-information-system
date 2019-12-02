@@ -1,4 +1,4 @@
-3@extends('layouts.app')
+@extends('layouts.app')
 
 @section('content')
 @include('inc.sidebar')
@@ -27,8 +27,8 @@
             @endforeach
         </ul>
         @else
-        <div class="bg-warning text-white text-center mt-lg-5">
-            <h4>No Students complaints yet</h4>
+        <div class="bg-warning text-white text-center mt-4 mt-md-5">
+            <h3>No Students complaints yet</h3>
         </div>
         @endif
 
