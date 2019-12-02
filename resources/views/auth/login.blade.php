@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center margintop-content">
-        <div class="col-md-7 mt-md-5">
+        <div class="col-md-7 mt-2 mt-md-5">
             <div class="card">
                 @if (session('message'))
                 <span class="alert alert-success alert-dismissible fade show">{{session('message')}}</span>

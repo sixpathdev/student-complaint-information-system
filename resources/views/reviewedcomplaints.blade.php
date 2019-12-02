@@ -3,7 +3,7 @@
 @section('content')
 @include('inc.sidebar')
 
-<div class="col-lg-10">
+<div class="col-md-10 toggle-block">
     <div class="text-center my-4">
         <h1 class="custom-text-size3">Reviewed Complaints</h1>
     </div>
