@@ -52,7 +52,7 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function () {
     });
 });
 
-// Auth::routes();
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
