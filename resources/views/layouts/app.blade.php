@@ -76,7 +76,7 @@
 
         @media screen and (max-width: 668px) {
             .margintop-login-content {
-                margin-top: 0.4em;
+                margin-top: 0;
             }
             .alert {
                 /* center the alert on small screens */
