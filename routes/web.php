@@ -52,10 +52,9 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function () {
     });
 });
 
-Auth::routes();
+// Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
 
 Route::get('/complaints', 'ComplaintController@index');
 Route::get('/complaints/create', 'ComplaintController@create')->name('complaint');

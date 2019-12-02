@@ -9,7 +9,7 @@
                 @endif
                 <div class="card-header text-center h4 smaller-h4">{{ $title ?? 'd' }}</div>
                 <div class="card-body">
-                    <form method="POST" action="{{ $loginRoute }}">
+                    <form method="POST" action="{{ route($loginRoute) }}">
                         @csrf
                         @method('post')
                         <div class="form-group row">

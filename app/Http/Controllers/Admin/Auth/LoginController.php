@@ -21,7 +21,7 @@ class LoginController extends Controller
     {
         return view('auth.login', [
             'title' => 'Admin Login',
-            'loginRoute' => 'admin/login',
+            'loginRoute' => 'admin.login',
             'forgotPasswordRoute' => 'admin.password.request',
         ]);
     }
@@ -75,5 +75,4 @@ class LoginController extends Controller
     {
         return 'email';
     }
-
 }
